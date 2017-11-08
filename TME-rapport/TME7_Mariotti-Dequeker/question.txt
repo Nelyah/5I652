@@ -1,0 +1,20 @@
+1.4 Questions: 
+
+2. La convolution permet un gain important de performance. Dès lors qu'on
+travaille sur des données de taille significative, des couches fully-connected
+ont une complexité qui croit de façon exponentielle. La convolution permettra
+d'appliquer un nombre limité de filtres et d'avoir un temps raisonnable de
+calcul. Pour la convolution, le nombre de filtres est limitant. Si trop de
+filtres sont définis, alors la problématique que l'on aura se rapprochera de
+celle qu'on avait avec le réseau fully connected. Ainsi on privilégie un petit
+nombre de filtres donc un grand nombre de couches.
+
+3. Le pooling permet de réduire la taille des données. Cela permet entre autres
+d'avoir une approximation locale qui peut donner une certaine résistatnce à la
+translation. Réduire la taille permet d'augmenter la profondeur, et donc le
+nombre de features.
+
+4. Dans ce cas là, les étapes de convolution vont donner un output qui sera une
+matrice plus grande que celle prévue au départ. Le problème qui pourrait
+arriver serait à une étape fully-connected où les tailles de matrice ne
+correspondraient pas.
