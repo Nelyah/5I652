@@ -1,0 +1,5 @@
+Q.1: Pour certains exemples, les heatmap représentent bien les images et les zones d'intérêts sont bien décrites. En revanche, un nombre non négligeable des cartes sont très bruitées, on a alors du mal à se rendre compte de comment elles sont repérées.
+
+Q.5: Pour l'image des bottes de foin, le fooling cible bien les zones d'intérêts (qui servent à la classification de cette image, comme on a pu le voir avec les cartes de saillance. L'image reste identifiable pour un humain, malgré le fait que l'algorithme puisse être trompé. En baissant le learning rate ou augmentant le nombre d'itérations, on réussi à obtenir un résultat plus fin.
+ 
+Q.8: Le modèle va progressivement modifier l'image afin de maximiser son score. Cela va impliquer de générer un nombre maximum de features dans l'image qui vont se rapporter à la classe target. Pour autant, les couleurs ne sont pas très significatives. On va également avoir uniquement une représentation des features clefs et non une représentation entière de l'objet. Dans le cas où l'on utilise un nombre d'itération suffisamment grand, partir d'une image réelle ou d'un bruit produit le même résultat. 

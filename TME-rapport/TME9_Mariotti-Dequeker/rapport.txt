@@ -1,0 +1,22 @@
+Partie 1:
+=========
+1. Les couches fully connected comptent pour 7*7*512*4096 + 4096*4096 + 4096*1000 ce qui donne (très) environ 120 633 664 paramètres. Par rapport à la quantité des paramètres des fully connected, on peut ici négliger le nombre de paramètres des couches convolutionnelles.
+
+2. La dernière couche représentera la distribution des probabilités de chaque classe, et sera de taille 1*1*1000.
+
+3. On a testé sur plusieurs images de chat. Les images (photos) sont bien reconnues. On a également testé sur des dessins de chat, qui n'ont pas été reconnus.
+
+Partie 2:
+=========
+
+5. Le nombre de paramètres demandé par VGG16 est trop important pour que l'on puisse le faire sur la base 15 Scene. De plus, la couche de sortie renvoie un vecteur de 1000 classes alors que nous ne sommes intéressés que par 15 classes différentes. 
+
+6. Les données présentes sur ImageNet représentent des images naturelles, au même titre que les données présentes dans 15 Scene. Elles partageront ainsi des caractéristiques communes.
+
+7. Il faut que les bases de données possèdent des classes suffisamment proches de celles que l'on veut classifier. Si elles ne le sont pas, nous ne seront pas capables de classifier correctement les classes de notre nouveau dataset. Par exemple : Si on apprend que des features sur une base de chats, et que l'on cherche ensuite à classifier des maisons. Alors les features apprises sur les chats ne seront pas pertinentes pour la classificiation de maisons.
+
+8. Plus la couche à laquelle les features sont extraites est profonde, plus l'image aura été tratiée et plus la profondeur du NN sera importante. On obtiendra alors des informations plus abstraites.
+
+9. Pour contourner le problème, il suffit de copier sur les trois dimensions.
+
+
